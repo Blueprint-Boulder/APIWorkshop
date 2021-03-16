@@ -26,10 +26,9 @@ def home():
 
     # ********************* YOUR CODE HERE *********************
     url = BASE_URL + "scores/"
-    response = requests.get(url)
-    json_resp = response.json()
-    if response.status_code != 200:
-        return 'Error -- notify instructor to help with troubleshooting!'
+    response = # TODO: make a get request!
+    json_resp = # TODO: access the returned data in json format
+    # TODO: Check status code from response!
     # **********************************************************
 
 
@@ -53,5 +52,4 @@ def home():
     return html
     
 if __name__ == "__main__":
-    # Visit localhost:5000 to view!
     app.run(debug=True)
