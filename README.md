@@ -62,16 +62,16 @@ url = 'https://api.teleport.org/api/urban_areas/slug:san-francisco-bay-area/scor
 6. Now, let's grab all of the data from that endpoint using a `GET` request. On line 15, replace the empty string with the follow code. Return the response status code to see if we had a successful API call (status code 200 means the transaction returned `OK`).
 ```
 response = requests.get(url)
-return response.status_code
+return str(response.status_code)
 ```
 
 7. If you got 200, yay! That means we're ready to turn this data into JSON format -- delete the status code return line from step 6, and add the following code (which transforms the requested data into json and then returns the result). If you would like to better understand what this response looks like, copy the json output. Then, paste this output into a json beautifier and examine the data (if you don't have a preferred one, I would suggest https://jsonformatter.curiousconcept.com/#)
 ```
 json_resp = response.json()
-return json_resp
+return str(json_resp)
 ```
 
-8. Now we're ready to generate our dashboard! The line `util.generate_html(LOCATION, json_resp)` uses a helper function to this for us. Refresh our browser at `localhost:5000` and we should see our dashboard for San Francisco! 
+8. Now we're ready to generate our dashboard! Delete the line that returns json, and the line `util.generate_html(LOCATION, json_resp)` uses a helper function will do this for us. Refresh our browser at `localhost:5000` and we should see our dashboard for San Francisco! 
 
 9. Now, we want to make our dashboard work for other locations! We can do this using the helper function provided in `util.py` called `check_valid_location()`. As you can see by the comments in `util.py`, this function takes in a location and returns a URL if the location is valid in the Teleport API. If it isn't, the function returns an empty string. Thus, add the following code, replacing the LOCATION string with whatever place you'd like! (major cities tend to work better)
 ```
