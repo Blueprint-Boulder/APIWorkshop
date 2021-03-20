@@ -7,14 +7,13 @@ app = Flask(__name__)
 
 @app.route("/")
 def home():
-    
+
     return 'DELETEME -- as you can see, your webpage displays what this function returns!'
 
+    LOCATION = ''   # TODO: enter your desired location
     url = ''        # TODO: figure out the endpoint to use!
     response = ''   # TODO: make a get request!
     json_resp = ''  # TODO: access the returned data in json format
-
-    # TODO: make sure your status code is 200 (= OK)!
 
     # Construct HTML code to return
     return util.generate_html(LOCATION, json_resp)
