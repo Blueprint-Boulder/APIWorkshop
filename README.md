@@ -19,9 +19,13 @@ Whichever track you’re working on (underserved populations, health, children a
 1. First, we will set up our development environment. Download the code from this repository and open up `starter_code.py`.
 
 2. Go to https://developers.teleport.org/ and click 'API' to access Teleport API's documentation. Documentation is super important for software development in general, but it's especially invaluable when using APIs!
+
     a. Click 'Get Started'
+
     b. Now you will see various examples of endpoint calls and data returned when you make those calls.
+
     c. Scroll down to the section titled "INCOME, LIVING COSTS & QUALITY OF LIFE DATA"
+    
     d. Copy the example URL (https://api.teleport.org/api/urban_areas/slug:san-francisco-bay-area/scores/) and paste it into your browser. Notice how the data looks!
 
 3. Open up your terminal and run `python starter_code.py`. If you type in `localhost:5000` to your browser, you should see the message "DELETEME -- as you can see, your webpage displays what this function returns!" appear.
